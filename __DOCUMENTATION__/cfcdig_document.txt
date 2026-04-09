@@ -1,6 +1,6 @@
 #
 # CFC.DIG ARCHIVE FORMAT | VERSION ?
-# BY: SOCKNASTRE
+# BY: SOCKNASTRE & Theus
 #
 # Associated Documents: cfcdig_struct.cs
 #
@@ -12,23 +12,16 @@ NOTE: This documentation is based on the CFC.DIG Archive, other variations may
 differ. Also make sure to follow reading this along with cfcdig_structs.cs. :D
 
 CFC.DIG Structure:
-	1. Header
+	1. File Records
 
-16 blank bytes, whether or not this can be considered a header is debatable, but
-these can be considered magic bytes or an identifier although that probably isn't their
-intended meaning.
+For every file being packed there is an PacketRecord struct here. In every CFC.DIG the
+"offset" field is stored as a "CD Sector". This means the packets are aligned into cd sectors of 2048 bytes (0x800).
 
-	2. File Records
+	2. Data
 
-For every file being packed there is an FileRecord struct here. In every CFC.DIG the
-"offset" field is divided by 0x800. This is because all files and the header + file
-records are padded to 0x800 as well.
-
-	3. Data
-
-File data, all data here is stored in the same order as the file records but this doesn't
-technically have to be true given the FileRecord struct. Data is sometimes compressed, usually,
-a file isn't compressed if the first 4 bytes are null.
+Packet data, all data here is stored in the same order as the packet records but this doesn't
+technically have to be true given the PacketRecord struct. Data is sometimes compressed, usually,
+a packet isn't compressed if the first 4 bytes are null.
 
 Compression:
 
