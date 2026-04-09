@@ -1,5 +1,3 @@
-**Project is not planned on being continued or supported, you may look for an alternative or continue to use the code/software here. Thank you.**
-
 ## CFCDIGCli
 Requires .NET Framework 4.8
 
@@ -10,16 +8,8 @@ Requires .NET Framework 4.8
   - Tool can read from a "filelist" allowing custom paths to be correctly packed in order.
   - Provides working compression and decompression algorithm which can be easily implemented in other tools/systems in C#.
 
-### F.A.Q
-
-Q: _Why does opening the tool with no arguments give me an error?_  
-A: This is because when the tool is opened with no arguments it searches for a "data" folder and (optionally) a "filelist.txt" to auto-pack; this is a feature for ease-of-access. If you are looking to see the help page then use the "-h" command.
-
 Q: _How do I use a "filelist"? What does that even mean?_  
 A: Read DOCUMENTATION for details about that.
-
-Q: _How can I get in direct contact with anyone related to this tool?_  
-A: You can join the [Naruto Classic's Discord](https://discord.gg/jhKmg97), where we usually discuss all of this stuff.
 
 ### Credits
   - Biggest thanks to [Raw-man](https://github.com/Raw-man) (!Mr.JellyBean) for figuring out the compression/decompression algorithms, and for creating [Racjin (de)compression](https://github.com/Raw-man/Racjin-de-compression) which was the basis for my conversion of his C++ compression/decompression code into C#. He also helped confirm things about CFC.DIG and did some digging around into other game's CFC.DIG or similar archives that were made by Racjin.
